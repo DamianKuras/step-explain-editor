@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CKEditor 5 Framework – Implementing a simple widget</title>
+
+    <style>
+        .step-explain {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            background: lightgray;
+        }
+
+        .step-explain-left,
+        .step-explain-right {
+            margin: .5em;
+            word-break: break-all;
+            background-color: white;
+        }
+
+        .step-explain-right p img {
+            max-width: 100%;
+        }
+
+        .step-explain-right p,
+        .step-explain-right pre {
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+    </style>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+
+<body>
+    <div id="editor">
+        <p>Editor content goes here.</p>
+    </div>
+        <div id="output"></div>
+        <button onclick="getOutput()">get output</button>
+        <div> asdfasd fasd kafjsld fl;asd iofas idj</div>
+        <div> asdfasd fasd kafjsld fl;asd iofas idj</div>
+        <div> asdfasd fasd kafjsld fl;asd iofas idj</div>
+
+    <script>
+        function getOutput() {
+            var data = editor.getData();
+            document.getElementById("output").innerHTML = data;
+        }
+    </script>
+    <script src="dist/bundle.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    </body>
+
+</html>
