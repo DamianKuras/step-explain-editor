@@ -11,7 +11,7 @@
 
 ## General info
 Rich text editor for image and code step by step explanation.
-![presentation](presentation.gif)
+![presentation](https://github.com/DamianKuras/step-explain-editor/blob/main/presentation.gif)
 
 ## Technologies
 Project is created with:
