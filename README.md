@@ -12,8 +12,6 @@
 ## General info
 Rich text editor for image and code step by step explanation
 ![presentation](https://github.com/DamianKuras/step-explain-editor/blob/main/presentation.gif)
-
-Using otput in action
 ![presentation2](https://github.com/DamianKuras/step-explain-editor/blob/main/presentation2.gif)
 
 ## Technologies
