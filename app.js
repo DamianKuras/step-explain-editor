@@ -64,7 +64,7 @@ ClassicEditor
             AutoLink,
             SourceEditing],
         toolbar: ['heading', '|',
-            'alignment:left', 'alignment:right', 'alignment:center', 'alignment:justify', '|',
+            'alignment:left','alignment:center' , 'alignment:right', 'alignment:justify', '|',
             'blockQuote', '|',
             'insertTable', '|',
             'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', '|',
@@ -105,10 +105,24 @@ ClassicEditor
                     type: 'marker'
                 },
                 {
-                    model: 'redMarker',
-                    class: 'marker-red',
-                    title: 'Red marker',
-                    color: 'var(--ck-highlight-marker-red)',
+                    model: 'blueMarker',
+                    class: 'marker-blue',
+                    title: 'Blue marker',
+                    color: 'var(--ck-highlight-marker-blue)',
+                    type: 'marker'
+                },
+                {
+                    model: 'pinkMarker',
+                    class: 'marker-pink',
+                    title: 'Pink marker',
+                    color: 'var(--ck-highlight-marker-pink)',
+                    type: 'marker'
+                },
+                {
+                    model: 'yellowMarker',
+                    class: 'marker-yellow',
+                    title: 'Yellow marker',
+                    color: 'var(--ck-highlight-marker-yellow)',
                     type: 'marker'
                 }
             ]

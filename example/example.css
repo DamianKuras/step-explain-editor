@@ -10,6 +10,15 @@ blockquote {
 .marker-green {
     background-color: hsl(120, 93%, 68%)
 }
+.marker-blue{
+    background-color:hsl(201, 97%, 72%);
+}
+.marker-pink{
+    background-color: hsl(345, 96%, 73%);
+}
+.marker-yellow{
+    background-color:hsl(60, 97%, 73%);
+}
 .step-explain {
     display: flex;
     flex-direction: column-reverse;
@@ -26,7 +35,7 @@ blockquote {
     max-width: 100%;
 }
 
-@media only screen and (min-width:1350px) {
+@media only screen and (min-width:1200px) {
     .step-explain {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -37,4 +46,7 @@ blockquote {
         top: 1em !important;
         z-index: 3 !important;
     }
+}
+.ck-editor__editable_inline {
+    min-height: 400px;
 }
