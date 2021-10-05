@@ -5,45 +5,35 @@ import { toWidget, toWidgetEditable } from '@ckeditor/ckeditor5-widget/src/utils
 import Widget from '@ckeditor/ckeditor5-widget/src/widget';
 
 import InsertStepExplainCommand from './insertStepExplainCommand';   
-
+import './theme/stepExplain.css';
 export default class StepExplainEditing extends Plugin {
-    static get requires() {                                                    // ADDED
+    static get requires() {                                                   
         return [ Widget ];
     }
     init() {
         this._defineSchema();
         this._defineConverters();   
-        this.editor.commands.add( 'insertStepExplain', new InsertStepExplainCommand( this.editor ) );                                           // ADDED
+        this.editor.commands.add( 'insertStepExplain', new InsertStepExplainCommand( this.editor ) );                                 
     }
 
     _defineSchema() {                                                         
         const schema = this.editor.model.schema;
 
         schema.register( 'stepExplain', {
-            // Behaves like a self-contained object (e.g. an image).
             isObject: true,
-
-            // Allow in places where other blocks are allowed (e.g. directly in the root).
             allowWhere: '$block'
         } );
 
         schema.register( 'stepExplainLeft', {
-            // Cannot be split or left by the caret.
             isLimit: true,
-
             allowIn: 'stepExplain',
-
-            // Allow content which is allowed in blocks (i.e. text with attributes).
             allowContentOf: '$root'
         } );
 
         schema.register( 'stepExplainRight', {
-            // Cannot be split or left by the caret.
             isLimit: true,
 
             allowIn: 'stepExplain',
-
-            // Allow content which is allowed in the root (e.g. paragraphs).
             allowContentOf: '$root'
         } );
         schema.addChildCheck( ( context, childDefinition ) => {
@@ -57,8 +47,6 @@ export default class StepExplainEditing extends Plugin {
     }
     _defineConverters() {                                                      
         const conversion = this.editor.conversion;
-
-        // <simpleBox> converters
         conversion.for( 'upcast' ).elementToElement( {
             model: 'stepExplain',
             view: {
@@ -82,7 +70,6 @@ export default class StepExplainEditing extends Plugin {
             }
         } );
 
-        // <simpleBoxTitle> converters
         conversion.for( 'upcast' ).elementToElement( {
             model: 'stepExplainLeft',
             view: {
@@ -100,9 +87,7 @@ export default class StepExplainEditing extends Plugin {
         conversion.for( 'editingDowncast' ).elementToElement( {
             model: 'stepExplainLeft',
             view: ( modelElement, { writer: viewWriter } ) => {
-                // Note: You use a more specialized createEditableElement() method here.
                 const div = viewWriter.createEditableElement( 'div', { class: 'step-explain-left' } );
-
                 return toWidgetEditable( div, viewWriter );
             }
         } );

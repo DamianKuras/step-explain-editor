@@ -30,6 +30,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Mathematics from 'ckeditor5-math/src/math';
+import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 ClassicEditor
     .create(document.querySelector('#editor'), {
         plugins: [Alignment,
@@ -60,7 +61,8 @@ ClassicEditor
             AutoImage,
             Link,
             Mathematics,
-            AutoLink],
+            AutoLink,
+            SourceEditing],
         toolbar: ['heading', '|',
             'alignment:left', 'alignment:right', 'alignment:center', 'alignment:justify', '|',
             'blockQuote', '|',
@@ -71,7 +73,8 @@ ClassicEditor
             'stepExplain', '|',
             'math', '|',
             'findAndReplace', 'highlight', '|',
-            'undo', 'redo'],
+            'undo', 'redo','|',
+            'sourceEditing',],
         image: {
             toolbar: ['imageStyle:block', 'imageStyle:side',
                 '|',
@@ -134,9 +137,8 @@ ClassicEditor
                 // Use the "js" class for JavaScript code blocks.
                 // Note that only the first ("js") class will determine the language of the block when loading data.
                 { language: 'javascript', label: 'JavaScript', class: 'language-js' },
-
                 // Python code blocks will have the default "language-python" CSS class.
-                { language: 'python', label: 'language-python' }
+                { language: 'python', label: 'python', class: 'language-python' }
             ]
         },
         typing: {

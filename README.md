@@ -10,7 +10,7 @@ Rich text editor for image and code step explanation
 	
 ## Technologies
 Project is created with:
-* CkEditor: 5
+* CkEditor 5
 	
 ## Setup
 To run this project, install it locally using npm:

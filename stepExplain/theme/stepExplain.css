@@ -1,0 +1,18 @@
+.ck .step-explain {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: lightgray;
+}
+
+.ck .step-explain-left,
+.ck .step-explain-right {
+    margin: .1em;
+    word-break: break-all;
+    background-color: white;
+    border-radius: .05em;
+}
+
+.ck .step-explain-right p img {
+    max-width: 100%;
+}
+
