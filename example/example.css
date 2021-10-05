@@ -1,0 +1,40 @@
+blockquote {
+    overflow: hidden;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    border-left: solid 5px hsl(0, 0%, 80%);
+}
+.marker-green {
+    background-color: hsl(120, 93%, 68%)
+}
+.step-explain {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.step-explain-left,
+.step-explain-right {
+    margin: .5em;
+    word-break: break-all;
+    background-color: white;
+}
+
+.step-explain-right p img {
+    max-width: 100%;
+}
+
+@media only screen and (min-width:1350px) {
+    .step-explain {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .step-explain-right p,
+    .step-explain-right pre {
+        position: sticky !important;
+        top: 1em !important;
+        z-index: 3 !important;
+    }
+}

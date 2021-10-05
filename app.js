@@ -128,17 +128,33 @@ ClassicEditor
         },
         codeBlock: {
             languages: [
-                // Do not render the CSS class for the plain text code blocks.
                 { language: 'plaintext', label: 'Plain text', class: '' },
-
-                // Use the "php-code" class for PHP code blocks.
-                { language: 'c++', label: 'c++', class: 'language-cpp' },
-                { language: 'c#', label: 'c#', class: 'language-csharp' },
-                // Use the "js" class for JavaScript code blocks.
-                // Note that only the first ("js") class will determine the language of the block when loading data.
-                { language: 'javascript', label: 'JavaScript', class: 'language-js' },
-                // Python code blocks will have the default "language-python" CSS class.
-                { language: 'python', label: 'python', class: 'language-python' }
+                { language: 'C++', label: 'C++', class: 'language-cpp' },
+                { language: 'C#', label: 'C#', class: 'language-csharp' },
+                { language: 'javascript', label: 'javascript', class: 'language-javascript' },
+                { language: 'ASP.NET (C#)', label: 'ASP.NET (C#)', class: 'language-aspnet' },
+                { language: 'Bash', label: 'Bash', class: 'language-bash' },
+                { language: 'Django', label: 'Django', class: 'language-django' },
+                { language: 'Go', label: 'Go', class: 'language-go' },
+                { language: 'GraphQL', label: 'GraphQL', class: 'language-graphql' },
+                { language: 'Haskell', label: 'Haskell', class: 'language-haskell' },
+                { language: 'Java', label: 'Java', class: 'language-java' },
+                { language: 'JSON', label: 'Java', class: 'language-json' },
+                { language: 'Kotlin', label: 'Kotlin', class: 'language-kotlin' },
+                { language: 'Lisp', label: 'Lisp', class: 'language-lisp' },
+                { language: 'Markdown', label: 'Markdown', class: 'language-markdown' },
+                { language: 'Objective-C', label: 'Objective-C', class: 'language-objectivec' },
+                { language: 'Perl', label: 'Perl', class: 'language-perl' },
+                { language: 'PHP', label: 'PHP', class: 'language-php' },
+                { language: 'PL/SQL', label: 'PL/SQL', class: 'language-plsql' },
+                { language: 'Python', label: 'Python', class: 'language-python' },
+                { language: 'R', label: 'R', class: 'language-r' },
+                { language: 'SQL', label: 'SQL', class: 'language-sql' },
+                { language: 'Ruby', label: 'Ruby', class: 'language-ruby' },
+                { language: 'Rust', label: 'Rust', class: 'language-rust' },
+                { language: 'TypeScript', label: 'TypeScript', class: 'language-typescript' },
+                { language: 'WebAssembly', label: 'WebAssembly', class: 'language-wasm' },
+                { language: 'NASM', label: 'NASM', class: 'language-nasm' },
             ]
         },
         typing: {
